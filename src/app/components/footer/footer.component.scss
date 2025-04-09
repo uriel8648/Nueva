@@ -1,0 +1,142 @@
+// Footer component styles
+// Migrated from homepage.html footer styles
+
+// Base footer styles
+.w3-padding-32 {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+.w3-light-grey {
+  background-color: #f1f1f1 !important;
+}
+
+.w3-small {
+  font-size: 12px !important;
+}
+
+.w3-center {
+  text-align: center !important;
+}
+
+// Row and column layout
+.w3-row-padding {
+  padding: 0 8px;
+  &::before, &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.w3-col {
+  float: left;
+  width: 100%;
+  
+  &.s4 {
+    width: 33.33333%;
+  }
+}
+
+// Form elements
+.w3-input {
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  
+  &.w3-border {
+    border: 1px solid #ccc !important;
+  }
+}
+
+// Button styles
+.w3-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  
+  &.w3-block {
+    display: block;
+    width: 100%;
+  }
+  
+  &.w3-black {
+    color: #fff !important;
+    background-color: #000 !important;
+  }
+  
+  &:hover {
+    background-color: #555;
+    color: white;
+  }
+}
+
+// Social icons
+.w3-hover-opacity {
+  opacity: 0.60;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.w3-large {
+  font-size: 18px !important;
+}
+
+// Footer bottom bar
+.w3-black {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+.w3-padding-24 {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+// Links
+a {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Icon spacing
+.fa {
+  margin-right: 8px;
+  
+  &.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+  }
+  
+  &.w3-large {
+    margin-right: 12px;
+    cursor: pointer;
+  }
+}
+
+// Justify text
+.w3-justify {
+  text-align: justify !important;
+}
+
+// Responsive adjustments
+@media (max-width: 600px) {
+  .w3-col.s4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

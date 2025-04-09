@@ -1,0 +1,9 @@
+// No TypeScript conversion needed for image assets
+// The PNG file should be copied from images/elearn.png to src/assets/images/elearn.png
+// This can be done manually or through your build process
+// 
+// In Angular, you would reference this image in your components like:
+// <img src="assets/images/elearn.png" alt="E-Learning Logo">
+// 
+// Or in TypeScript:
+// logoPath = 'assets/images/elearn.png';

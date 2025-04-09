@@ -1,0 +1,58 @@
+<div class="w3-padding-32 w3-light-grey w3-small w3-center" id="footer">
+  <div class="w3-row-padding">
+    <div class="w3-col s4">
+      <h4>Contact</h4>
+      <p>Questions? Go ahead.</p>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <p>
+          <input class="w3-input w3-border" type="text" placeholder="Name" formControlName="name" required>
+          <span *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error-message">
+            Name is required
+          </span>
+        </p>
+        <p>
+          <input class="w3-input w3-border" type="text" placeholder="Email" formControlName="email" required>
+          <span *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
+            Valid email is required
+          </span>
+        </p>
+        <p>
+          <input class="w3-input w3-border" type="text" placeholder="Subject" formControlName="subject" required>
+          <span *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="error-message">
+            Subject is required
+          </span>
+        </p>
+        <p>
+          <input class="w3-input w3-border" type="text" placeholder="Message" formControlName="message" required>
+          <span *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="error-message">
+            Message is required
+          </span>
+        </p>
+        <button type="submit" class="w3-button w3-block w3-black" [disabled]="contactForm.invalid">Send</button>
+      </form>
+    </div>
+
+    <div class="w3-col s4">
+      <h4>About</h4>
+      <p><a [routerLink]="['/about']">About us</a></p>
+    </div>
+
+    <div class="w3-col s4 w3-justify">
+      <h4>Store</h4>
+      <p><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> E-Learning Systems LTD.</p>
+      <p><i class="fa fa-fw fa-phone" aria-hidden="true"></i> 1234567890</p>
+      <p><i class="fa fa-fw fa-envelope" aria-hidden="true"></i> michto@fs.com</p>
+      <br>
+      <a href="#" class="social-icon"><i class="fa fa-facebook-official w3-hover-opacity w3-large" aria-label="Facebook"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-instagram w3-hover-opacity w3-large" aria-label="Instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-snapchat w3-hover-opacity w3-large" aria-label="Snapchat"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-pinterest-p w3-hover-opacity w3-large" aria-label="Pinterest"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-twitter w3-hover-opacity w3-large" aria-label="Twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fa fa-linkedin w3-hover-opacity w3-large" aria-label="LinkedIn"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="w3-black w3-center w3-padding-24">
+  Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" rel="noopener" class="w3-hover-opacity">Our Powerful Mind</a>
+</div>

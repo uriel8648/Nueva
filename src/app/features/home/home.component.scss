@@ -1,0 +1,74 @@
+// src/app/features/home/home.component.scss
+
+// Base styles
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+// Sidebar styles
+.w3-sidebar a {
+  font-family: "Roboto", sans-serif;
+}
+
+// Button transitions
+.w3-button {
+  transition: background-color 0.3s;
+  
+  &:hover {
+    background-color: #555;
+    color: white;
+  }
+}
+
+// Text colors
+.w3-left {
+  color: white;
+}
+
+.w3-jumbo {
+  color: white;
+}
+
+// Course image styles with hover effects
+.course-image {
+  width: 100%;
+  transition: transform 0.3s;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Sidebar styles
+.sidebar {
+  z-index: 3;
+  width: 250px;
+}
+
+// Main content container
+.main-content {
+  margin-left: 250px;
+}
+
+// Header spacing for small screens
+.header-spacing {
+  margin-top: 83px;
+}
+
+// Footer styling
+.footer {
+  padding: 32px;
+}
+
+// Copyright section
+.copyright {
+  padding: 24px;
+}
+
+// Social media icons
+.social-icon {
+  &:hover {
+    opacity: 0.7;
+  }
+}

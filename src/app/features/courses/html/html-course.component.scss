@@ -1,0 +1,52 @@
+/* HTML Course Component Styles */
+
+// Base styles
+:host {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: #333;
+}
+
+// Course card styling
+.course {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  h2 {
+    margin: 0;
+    color: #007BFF;
+  }
+
+  p {
+    color: #555;
+  }
+}
+
+// Navigation button
+.back-button {
+  margin-top: 20px;
+  
+  a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: #333;
+    }
+  }
+}

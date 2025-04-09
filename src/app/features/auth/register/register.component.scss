@@ -1,0 +1,141 @@
+/* 
+ * Register component styles
+ * Migrated from reg.jsp
+ * This file contains styles specific to the registration component
+ */
+
+// Variables
+$primary-color: #3f51b5;
+$secondary-color: #f44336;
+$text-color: #333;
+$light-gray: #f1f1f1;
+$dark-gray: #757575;
+$white: #fff;
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
+// Main container styles
+.register-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+// Form styles
+.register-form {
+  display: flex;
+  flex-direction: column;
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: $font-primary;
+    font-weight: 500;
+    color: $text-color;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: $font-primary;
+    
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+    
+    &.ng-invalid.ng-touched {
+      border-color: $secondary-color;
+    }
+  }
+  
+  .error-message {
+    color: $secondary-color;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+// Button styles
+.btn-register {
+  background-color: $primary-color;
+  color: $white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: $font-primary;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+  
+  &:disabled {
+    background-color: $dark-gray;
+    cursor: not-allowed;
+  }
+}
+
+// Header styles
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+  
+  h2 {
+    font-family: $font-secondary;
+    color: $primary-color;
+    font-weight: 500;
+  }
+  
+  p {
+    color: $dark-gray;
+    font-family: $font-primary;
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .register-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .btn-register {
+    width: 100%;
+  }
+}
+
+// Additional helper classes
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.login-link {
+  color: $primary-color;
+  text-decoration: none;
+  font-weight: 500;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}

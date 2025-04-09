@@ -1,0 +1,12 @@
+<div class="sql-courses-container">
+  <h1>SQL Courses</h1>
+  
+  <div class="course" *ngFor="let course of courses">
+    <h2>{{ course.title }}</h2>
+    <p>{{ course.description }}</p>
+  </div>
+  
+  <div class="back-button-container" style="margin-top: 20px;">
+    <a [routerLink]="['/home']" class="w3-button w3-black">Back to Homepage</a>
+  </div>
+</div>

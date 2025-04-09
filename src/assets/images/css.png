@@ -1,0 +1,11 @@
+// No code conversion needed - this is an image asset migration
+// The PNG file should be copied from images/css.png to src/assets/images/css.png
+// 
+// In Angular projects, static assets like images should be placed in the src/assets directory
+// Any references to this image in the application should be updated to use the new path:
+// 
+// Old path: images/css.png
+// New path: assets/images/css.png (when referenced from components)
+//
+// Example usage in Angular component template:
+// <img src="assets/images/css.png" alt="CSS icon">

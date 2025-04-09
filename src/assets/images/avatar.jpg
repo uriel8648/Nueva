@@ -1,0 +1,11 @@
+// This file is a simple asset migration - no code conversion needed
+// The image file has been moved from images/avatar.jpg to src/assets/images/avatar.jpg
+// as part of the Angular migration process.
+
+// Note: This is a binary image file (JPEG format) that has been moved to the Angular
+// assets directory structure following Angular best practices. The image appears to be
+// a user avatar/profile picture.
+
+// No TypeScript code is required for this migration as it's a static asset.
+// The image will be referenced in components using the path:
+// 'assets/images/avatar.jpg' instead of the previous 'images/avatar.jpg'

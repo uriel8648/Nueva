@@ -1,0 +1,123 @@
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+        <i (click)="closeSidebar()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+        <h3 class="w3-wide w3-white"><b>E-LEARNING</b></h3>
+    </div>
+    <div class="w3-padding-64 w3-large w3-text-white" style="font-weight:bold">
+        <a [routerLink]="['/html']" class="w3-bar-item w3-button">HTML</a>
+        <a [routerLink]="['/css']" class="w3-bar-item w3-button">CSS</a>
+        <a [routerLink]="['/sql']" class="w3-bar-item w3-button">SQL</a>
+        <a [routerLink]="['/java']" class="w3-bar-item w3-button">JAVA</a>
+        <a [routerLink]="['/jquery']" class="w3-bar-item w3-button">JQuery</a>
+        <a [routerLink]="['/javascript']" class="w3-bar-item w3-button">JAVASCRIPT</a>
+    </div>
+    <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+    <div class="w3-bar-item w3-padding-24 w3-wide">E-LEARNING</div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" (click)="toggleSidebar()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" (click)="closeSidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<main class="w3-main" style="margin-left:250px">
+
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+
+    <!-- Top header -->
+    <header class="w3-container w3-xlarge">
+        <p class="w3-left">Available Courses</p>
+        <p class="w3-right">
+            <i class="fa fa-search"></i>
+        </p>
+    </header>
+
+    <!-- Image header -->
+    <div class="w3-display-container w3-container">
+        <img src="https://www.w3schools.com/w3images/forestbridge.jpg" alt="Courses" style="width:100%">
+        <div class="w3-display-topleft w3-text-black" style="padding:24px 48px">
+            <h1 class="w3-jumbo w3-hide-small">Available Courses</h1>
+            <p><a href="#Courses" class="w3-button w3-black w3-padding-large w3-large">CHOOSE NOW</a></p>
+        </div>
+    </div>
+
+    <div class="w3-container w3-text-grey" id="Courses">
+        <p>{{ courses.length }} items</p>
+    </div>
+
+    <!-- Product grid -->
+    <div class="w3-row w3-grayscale">
+        <div class="w3-col l3 s6" *ngFor="let course of courses | slice:0:2">
+            <div class="w3-display-container">
+                <img [src]="course.image" class="course-image" [alt]="course.name + ' Course'">
+                <div class="w3-display-middle w3-display-hover">
+                    <button class="w3-button" (click)="startCourse(course)">Start now <i class="fa fa-shopping-cart"></i></button>
+                </div>
+                <p>{{ course.name }}<br></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-padding-32 w3-light-grey w3-small w3-center" id="footer">
+        <div class="w3-row-padding">
+            <div class="w3-col s4">
+                <h4>Contact</h4>
+                <p>Questions? Go ahead.</p>
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <p><input class="w3-input w3-border" type="text" placeholder="Name" formControlName="name" required></p>
+                    <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+                        <div *ngIf="contactForm.get('name')?.errors?.['required']">Name is required.</div>
+                    </div>
+                    
+                    <p><input class="w3-input w3-border" type="text" placeholder="Email" formControlName="email" required></p>
+                    <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+                        <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</div>
+                        <div *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email.</div>
+                    </div>
+                    
+                    <p><input class="w3-input w3-border" type="text" placeholder="Subject" formControlName="subject" required></p>
+                    <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched" class="text-danger">
+                        <div *ngIf="contactForm.get('subject')?.errors?.['required']">Subject is required.</div>
+                    </div>
+                    
+                    <p><input class="w3-input w3-border" type="text" placeholder="Message" formControlName="message" required></p>
+                    <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+                        <div *ngIf="contactForm.get('message')?.errors?.['required']">Message is required.</div>
+                    </div>
+                    
+                    <button type="submit" class="w3-button w3-block w3-black" [disabled]="contactForm.invalid">Send</button>
+                </form>
+            </div>
+
+            <div class="w3-col s4">
+                <h4>About</h4>
+                <p><a [routerLink]="['/about']">About us</a></p>
+            </div>
+
+            <div class="w3-col s4 w3-justify">
+                <h4>Store</h4>
+                <p><i class="fa fa-fw fa-map-marker"></i> E-Learning Systems LTD.</p>
+                <p><i class="fa fa-fw fa-phone"></i> 1234567890</p>
+                <p><i class="fa fa-fw fa-envelope"></i> michto@fs.com</p>
+                <br>
+                <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+                <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+                <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+                <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+                <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+            </div>
+        </div>
+    </footer>
+
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">Our Powerful Mind</a></div>
+
+    <!-- End page content -->
+</main>

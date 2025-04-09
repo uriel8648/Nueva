@@ -1,0 +1,16 @@
+<div class="html-courses-container">
+  <h1>HTML Courses</h1>
+  
+  <div class="course" *ngFor="let course of courses">
+    <h2>{{ course.title }}</h2>
+    <p>{{ course.description }}</p>
+  </div>
+  
+  <div *ngIf="!courses || courses.length === 0" class="no-courses-message">
+    <p>No courses available at the moment.</p>
+  </div>
+  
+  <div class="navigation-buttons" style="margin-top: 20px;">
+    <button mat-button color="primary" routerLink="/home">Back to Homepage</button>
+  </div>
+</div>

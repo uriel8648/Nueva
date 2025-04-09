@@ -1,0 +1,5 @@
+This is an image file (PNG format) that needs to be moved from the source location to the target location in the Angular project. This doesn't require code conversion since it's a binary asset file.
+
+For image assets in an Angular project, we simply need to ensure they're properly placed in the assets directory. The migration plan indicates that images should be moved to `src/assets/images/`.
+
+No TypeScript conversion is needed for this file. The file should be copied as-is from `images/jquery.png` to `src/assets/images/jquery.png`.
