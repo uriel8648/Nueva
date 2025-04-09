@@ -15,7 +15,7 @@ import { RouterModule } from '@angular/router';
 import { JavaScriptCourseComponent } from './javascript/javascript-course.component';
 import { JQueryCourseComponent } from './jquery/jquery-course.component';
 import { SqlCourseComponent } from './sql/sql-course.component';
-import { AppModule } from '../../app.module';
+import { CoursesRoutingModule } from './courses-routing.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { AppModule } from '../../app.module';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    CoursesRoutingModule
   ],
   exports: [
     RouterModule,

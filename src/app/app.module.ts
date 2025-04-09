@@ -30,16 +30,6 @@ import { JavaScriptCourseComponent } from './features/courses/javascript/javascr
 import { AuthModule } from './features/auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  { path: 'courses/html', component: HtmlCourseComponent },
-  { path: 'courses/css', component: CssCourseComponent },
-  { path: 'courses/sql', component: SqlCourseComponent },
-  { path: 'courses/java', component: JavaCourseComponent },
-  { path: 'courses/jquery', component: JQueryCourseComponent },
-  { path: 'courses/javascript', component: JavaScriptCourseComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
-]
 
 @NgModule({
   declarations: [
